@@ -9,10 +9,10 @@ import Menu from '~/components/Menu';
 import {
   Container,
   Content,
-  Card, CardHeader, CardContent, CardFooter, Title, Description, Annotation,
+  Card, CardTop, CardHeader, CardContent, CardFooter, Title, Description, Annotation, CardTouch,
 } from './styles';
 
-export default function Main() {
+export default function Main({ navigation }) {
   let offset = 0;
   const translateY = new Animated.Value(0);
 
@@ -65,25 +65,33 @@ export default function Main() {
           onHandlerStateChange={onHandlerStateChange}
         >
 
-          <Card style={{
-            transform: [{
-              translateY: translateY.interpolate({
-                inputRange: [-410, 0, 510],
-                outputRange: [-30, 0, 510],
-                extrapolate: 'clamp',
-              }),
-            }],
-          }}
+          <Card
+            style={{
+              transform: [{
+                translateY: translateY.interpolate({
+                  inputRange: [-410, 0, 510],
+                  outputRange: [-30, 0, 510],
+                  extrapolate: 'clamp',
+                }),
+              }],
+            }}
           >
-            <CardHeader>
-              <Icon name="attach-money" size={28} color="#666" />
-              <Icon name="visibility-off" size={28} color="#666" />
-            </CardHeader>
-            <CardContent>
-              <Title>Saldo disponível</Title>
-              <Description>R$ 267.611,65</Description>
-            </CardContent>
-            <CardFooter>
+            <CardTouch
+              onPress={() => navigation.navigate('Nuconta')}
+            >
+              <CardTop>
+                <CardHeader>
+                  <Icon name="attach-money" size={28} color="#666" />
+                  <Icon name="visibility-off" size={28} color="#666" />
+                </CardHeader>
+                <CardContent>
+                  <Title>Saldo disponível</Title>
+                  <Description>R$ 367.611,65</Description>
+                </CardContent>
+              </CardTop>
+
+            </CardTouch>
+            <CardFooter onPress={() => navigation.navigate('Nuconta')}>
               <Annotation>
                 Transferência de R$ 299,90 recebida de Miramoto Nakata hoje às 07:36h
               </Annotation>

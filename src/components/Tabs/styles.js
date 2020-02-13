@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import { Animated } from 'react-native';
+import { RectButton } from 'react-native-gesture-handler';
 
 export const Container = styled(Animated.View)`
   height: 100px;
@@ -12,7 +13,7 @@ export const TabsContainer = styled.ScrollView.attrs({
   showsHorizontalScrollIndicator: false,
 })``;
 
-export const TabItem = styled.View`
+export const TabItem = styled(RectButton)`
   width: 100px;
   height: 100px;
   background: rgba(255, 255, 255, 0.2);

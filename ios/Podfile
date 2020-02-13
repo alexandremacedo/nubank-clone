@@ -38,6 +38,14 @@ target 'nubank' do
 
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
 
+  pod 'react-native-viewpager', :path => '../node_modules/@react-native-community/viewpager'
+
+  pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
+
+  pod 'RNScreens', :path => '../node_modules/react-native-screens'
+
+  pod 'RNCMaskedView', :path => '../node_modules/@react-native-community/masked-view'
+
   target 'nubankTests' do
     inherit! :search_paths
     # Pods for testing

@@ -1,5 +1,6 @@
-import { Animated } from 'react-native';
+import { Animated, Button } from 'react-native';
 import styled from 'styled-components/native';
+import { RectButton } from 'react-native-gesture-handler';
 
 // Styled SafeArea iPhoneX e outros for bugs
 // Evita-se o uso de Tricks para manter o layout ao rotacionar
@@ -32,17 +33,24 @@ export const Card = styled(Animated.View)`
   top: 0px;
 `;
 
+export const CardTouch = styled.TouchableWithoutFeedback`
+  flex: 1;
+`;
+
+export const CardTop = styled.View`
+  flex: 1;
+`;
+
 export const CardHeader = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 15px 30px;
 `;
 
 export const CardContent = styled.View`
-  flex: 1;
   padding: 0 30px;
-  justify-content: center;
+  margin-top: 23%;
 `;
 
 export const Title = styled.Text`
@@ -56,7 +64,7 @@ export const Description = styled.Text`
   color: #333;
 `;
 
-export const CardFooter = styled.View`
+export const CardFooter = styled(RectButton)`
   padding: 30px;
   background: #eee;
   border-radius: 4px;

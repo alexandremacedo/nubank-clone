@@ -79,7 +79,7 @@ export const Annotation = styled.Text.attrs({
 
 export const Header = styled.View`
   flex-direction: row;
-  padding: 20px 25px 20px 25px;
+  padding: 15px 25px 15px 25px;
   background: #fff;
   align-items: center;
   justify-content: space-between;

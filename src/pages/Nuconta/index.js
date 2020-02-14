@@ -13,6 +13,7 @@ import {
 } from './styles';
 
 export default function Nuconta({ navigation }) {
+  console.log(navigation);
   return (
     <Container>
 
@@ -44,7 +45,7 @@ export default function Nuconta({ navigation }) {
             <Icon name="keyboard-arrow-right" size={25} color="#999" />
           </CardSaveMoney>
         </Card>
-        <Tabs />
+        <Tabs navigation={navigation} />
         <History />
       </Content>
 

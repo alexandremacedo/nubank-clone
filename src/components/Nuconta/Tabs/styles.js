@@ -36,3 +36,5 @@ export const Icon = styled.Image`
   width: 30px;
   height: 30px;
 `;
+
+export const TabTouch = styled.TouchableWithoutFeedback``;
